@@ -1,5 +1,7 @@
 # 🦷 Landing Page - Dra. Edianny Salazar
 
+![Vista previa de la Landing](./assets/preview.png)
+
 Landing page profesional y moderna desarrollada para servicios odontológicos, diseñada con una interfaz limpia, adaptable y completamente responsive para ofrecer una excelente experiencia de usuario en cualquier dispositivo.
 
 ## 🚀 Tecnologías utilizadas
