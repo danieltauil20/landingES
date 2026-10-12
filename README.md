@@ -19,6 +19,12 @@ Este proyecto ha sido construido utilizando herramientas modernas de desarrollo 
 - **Navegación Fluida:** Barra de navegación interactiva y optimizada para accesibilidad móvil.
 - **Identidad Visual:** Integración de logotipo personalizado y paleta de colores corporativa orientada al sector salud.
 
+## 💡 Aprendizajes y enfoque técnico
+Durante el desarrollo de esta landing page se aplicó un enfoque *Utility-First* combinando **React** y **Tailwind CSS** sobre **Vite**:
+- **Componentización y Estilos:** La integración de Tailwind directamente en la estructura JSX de React permitió construir una interfaz moderna y coherente sin necesidad de gestionar archivos CSS externos extensos.
+- **Flujo de desarrollo ágil:** El uso de Vite garantizó un refresco instantáneo en el navegador (HMR), optimizando el tiempo de desarrollo y la prueba de componentes en tiempo real.
+- **Buenas prácticas:** Estructura modular de componentes y control de versiones mediante un flujo de Git limpio y libre de conflictos de entorno.
+
 ## 🛠️ Instalación y ejecución local
 
 Si deseas clonar y probar este proyecto en tu entorno local, sigue estos pasos:
