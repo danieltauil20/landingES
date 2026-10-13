@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía Definitiva: Entorno de Desarrollo, Servidor Local y Sincronización con GitHub</title>
+<style>
+  :root{
+    --bg:#0f1220; --card:#171a2b; --card2:#1e2236; --ink:#e7e9f3;
+    --muted:#a2a7c4; --accent:#5b8cff; --accent2:#7ee2b8; --border:#2a2f4a;
+    --code:#0b0e1a; --warn:#ffcf6b; --pill:#232842;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#f4f6fc; --card:#ffffff; --card2:#f0f3fb; --ink:#1a1e33;
+      --muted:#5b607d; --accent:#2f5fe0; --accent2:#1f9d6b; --border:#e0e4f0;
+      --code:#0b0e1a; --warn:#8a6100; --pill:#eef1fb;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:32px 16px;
+  }
+  .wrap{max-width:900px; margin:0 auto}
+  header{
+    background:linear-gradient(135deg,var(--accent),#9b6bff);
+    color:#fff; border-radius:16px; padding:28px 30px; margin-bottom:26px;
+  }
+  header h1{margin:0 0 6px; font-size:26px}
+  header p{margin:0; opacity:.92}
+  .stack{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+  .pill{background:rgba(255,255,255,.18); border-radius:999px; padding:4px 12px; font-size:13px}
+  h2{font-size:20px; margin:34px 0 12px; display:flex; align-items:center; gap:10px}
+  .num{
+    background:var(--accent); color:#fff; width:30px; height:30px; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center; font-size:15px; flex:0 0 auto;
+  }
+  .card{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin:12px 0}
+  .note{
+    background:var(--card2); border-left:4px solid var(--accent2); border-radius:8px;
+    padding:12px 16px; margin:14px 0;
+  }
+  .note b{color:var(--accent2)}
+  .warn{border-left-color:var(--warn)} .warn b{color:var(--warn)}
+  code{background:var(--pill); padding:2px 6px; border-radius:6px; font-size:14px;
+    font-family:"SF Mono",Menlo,Consolas,monospace}
+  pre{
+    background:var(--code); color:#e7e9f3; border-radius:12px; padding:16px 18px;
+    overflow-x:auto; font-family:"SF Mono",Menlo,Consolas,monospace; font-size:13.5px; line-height:1.55;
+    border:1px solid #232842;
+  }
+  pre .c{color:#7a809e}      /* comentario */
+  pre .k{color:#7ea6ff}      /* keyword */
+  pre .s{color:#7ee2b8}      /* string */
+  pre .f{color:#ffcf6b}      /* func/deco */
+  .tree{white-space:pre; color:var(--ink)}
+  table{width:100%; border-collapse:collapse; margin:8px 0}
+  th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top}
+  th{color:var(--muted); font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:.03em}
+  td code{white-space:nowrap}
+  footer{color:var(--muted); font-size:13px; text-align:center; margin-top:36px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>🚀 Guía Definitiva: Entorno de Desarrollo, Servidor Local y Sincronización con GitHub</h1>
+    <p>Manual paso a paso para abrir el proyecto desde cero, desarrollar con Tailwind v4 y mantener tu repositorio sincronizado sin errores de Windows.</p>
+    <div class="stack">
+      <span class="pill">React / Vite</span>
+      <span class="pill">Tailwind CSS v4</span>
+      <span class="pill">Git & GitHub</span>
+      <span class="pill">Windows PowerShell</span>
+    </div>
+  </header>
+
+  <div class="note">
+    <b>Puntos clave a tener en cuenta antes de empezar:</b>
+    <ul style="margin:8px 0 0">
+      <li><b>Estructura del proyecto:</b> La carpeta principal actúa como contenedor raíz de Git, mientras que el código de la aplicación de React/Vite reside en su respectiva subcarpeta interna.</li>
+      <li><b>Bloqueos en Windows (EPERM):</b> Los archivos binarios internos de dependencias (como Vite o Tailwind) pueden bloquearse si el servidor local de desarrollo sigue ejecutándose en segundo plano. Apagarlo con <code>Ctrl + C</code> previene errores de permisos.</li>
+      <li><b>Sincronización limpia:</b> Seguir un orden estricto al ejecutar comandos de Git garantiza que la nube y tu entorno local se mantengan alineados.</li>
+    </ul>
+  </div>
+
+  <h2><span class="num">1</span> Cómo abrir y encender el proyecto desde cero</h2>
+  <div class="card">
+    <p>Cada vez que enciendas tu ordenador y quieras retomar el desarrollo de tu aplicación, sigue estos pasos:</p>
+    <ol style="margin:6px 0">
+      <li>Abre <b>Visual Studio Code</b>.</li>
+      <li>Ve al menú superior y selecciona <b>File &gt; Add Folder to Workspace...</b> (Agregar carpeta al área de trabajo) y elige la carpeta principal del proyecto (<code>LANDING EDIANNY SALAZAR</code>).</li>
+      <li>Abre la terminal integrada de VS Code (presionando <code>Ctrl + `</code>) y desplázate al directorio de trabajo ejecutando los siguientes comandos:</li>
+    </ol>
+<pre><span class="c"># 1. Ubicarse en la carpeta raíz del proyecto</span>
+cd <span class="s">"C:\Users\Jose Daniel\Desktop\LANDING EDIANNY SALAZAR"</span>
+
+<span class="c"># 2. Entrar a la subcarpeta interna donde reside el código de React/Vite</span>
+cd dra-edianny-salazar
+
+<span class="c"># 3. Arrancar el servidor local de desarrollo</span>
+npm run dev</pre>
+    <div class="note"><b>Resultado esperado:</b> La terminal te proporcionará una URL local (generalmente <code>http://localhost:5173</code>). Mantén presionada la tecla <b>Ctrl</b> y haz clic sobre ella para abrirla en tu navegador. Deja esta ventana de terminal abierta mientras programes.</div>
+  </div>
+
+  <h2><span class="num">2</span> Cómo modificar código y guardar cambios</h2>
+  <div class="card">
+    <p>Mientras el servidor local esté corriendo, puedes editar cualquier componente, estilo o archivo de tu aplicación en Visual Studio Code. Al guardar con <code>Ctrl + S</code>, los cambios se reflejarán automáticamente en tu navegador gracias a HMR (Hot Module Replacement).</p>
+    <table>
+      <tr><th>Acción</th><th>Descripción</th></tr>
+      <tr><td><b>Desarrollar</b></td><td>Edita tus archivos dentro de <code>src/</code> o ajusta estilos en <code>index.css</code> con Tailwind v4.</td></tr>
+      <tr><td><b>Verificar</b></td><td>Comprueba el comportamiento visual y funcional directamente en tu navegador local.</td></tr>
+    </table>
+  </div>
+
+  <h2><span class="num">3</span> Sincronizar tus cambios con GitHub</h2>
+  <div class="card">
+    <p>Una vez que hayas terminado tus modificaciones y estés satisfecho con el resultado, sigue este procedimiento para empaquetar y respaldar tu código en la nube:</p>
+    
+    <p><b>Paso A: Subir al directorio raíz de Git</b></p>
+    <p>Asegúrate de estar posicionado en la carpeta principal del repositorio (fuera de la subcarpeta interna) para que Git reconozca todos los cambios globales:</p>
+<pre>cd ..</pre>
+
+    <p><b>Paso B: Añadir y confirmar los cambios localmente</b></p>
+    <p>Prepara los archivos modificados y asígnales un mensaje descriptivo de lo que realizaste:</p>
+<pre>git add .
+git commit -m <span class="s">"Fix: descripción clara de los cambios realizados"</span></pre>
+
+    <p><b>Paso C: Enviar a la nube (GitHub)</b></p>
+    <p>Sube tu trabajo al repositorio remoto para mantenerlo respaldado:</p>
+<pre>git push origin main</pre>
+    <div class="note"><b>¿Qué pasa si hay un conflicto de versiones?</b> Si GitHub contiene actualizaciones previas o diverge de tu historial local, Git te indicará que ejecutes <code>git pull origin main --rebase</code> antes de subir. Si experimentas bloqueos de archivos en Windows por dependencias temporales, recuerda apagar el servidor con <code>Ctrl + C</code> antes de operar.</div>
+  </div>
+
+  <footer>Guía personalizada para el flujo de trabajo en entorno local y GitHub · 2026</footer>
+
+</div>
+</body>
+</html>

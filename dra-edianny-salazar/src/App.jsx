@@ -1,7 +1,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
-import { About } from './components/About';
+{/*import { About } from './components/About';*/}
 import { Testimonials } from './components/Testimonials';
 import { AppointmentForm } from './components/AppointmentForm';
 import { FAQ } from './components/FAQ';
@@ -13,7 +13,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <Services />
-      <About />
+      {/*<About />*/}
       <Testimonials />
       <FAQ />
       <AppointmentForm />
