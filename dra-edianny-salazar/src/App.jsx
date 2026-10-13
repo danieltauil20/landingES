@@ -6,6 +6,7 @@ import { Testimonials } from './components/Testimonials';
 import { AppointmentForm } from './components/AppointmentForm';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
+import VideoGallery from './components/VideoGallery';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <FAQ />
       <AppointmentForm />
       <Footer />
+      <VideoGallery />
 
       {/* BOTÓN FLOTANTE DE WHATSAPP DIRECTO */}
       <a
