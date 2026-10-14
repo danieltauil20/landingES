@@ -40,12 +40,17 @@ export function Navbar() {
             >
               Tratamientos
             </a>
+            
+            {/* APARTADO SOBRE LA DRA. COMENTADO EN ESCRITORIO */}
+            {/* 
             <a
               href="#sobre-mi"
               className="text-xs font-bold font-montserrat uppercase tracking-wider text-[#513028] hover:text-[#EBCAC5] transition-colors"
             >
               Sobre la Dra.
-            </a>
+            </a> 
+            */}
+
             <a
               href="#faq"
               className="text-xs font-bold font-montserrat uppercase tracking-wider text-[#513028] hover:text-[#EBCAC5] transition-colors"
@@ -92,13 +97,18 @@ export function Navbar() {
           >
             Tratamientos
           </a>
+
+          {/* APARTADO SOBRE LA DRA. COMENTADO EN MÓVIL */}
+          {/* 
           <a
             href="#sobre-mi"
             onClick={() => setIsOpen(false)}
             className="block text-sm font-bold font-montserrat uppercase tracking-wider text-[#513028] py-2 border-b border-[#513028]/5"
           >
             Sobre la Dra.
-          </a>
+          </a> 
+          */}
+
           <a
             href="#faq"
             onClick={() => setIsOpen(false)}
