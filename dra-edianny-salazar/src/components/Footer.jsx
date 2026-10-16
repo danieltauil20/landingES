@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-[#EBCAC5]/15">
           
-          {/* COLUMNA 1: Marca & Descripción */}
+          {/* COLUMNA 1: Marca y Descripción */}
           <div className="lg:col-span-5 space-y-4">
             <h3 className="text-2xl font-bold font-serif text-white tracking-wide">
               Dra. Edianny Salazar
@@ -51,9 +51,9 @@ export function Footer() {
               <li>
                 <a href="#servicios" className="hover:text-white transition-colors">Tratamientos</a>
               </li>
-              <li>
+              {/*<li>
                 <a href="#sobre-mi" className="hover:text-white transition-colors">Sobre la Dra. Edianny</a>
-              </li>
+              </li>*/}
               <li>
                 <a href="#contacto" className="hover:text-white transition-colors">Solicitar Cita</a>
               </li>
@@ -66,10 +66,10 @@ export function Footer() {
               Especialidades
             </h4>
             <ul className="space-y-2 text-xs font-montserrat text-[#EBCAC5]/80">
-              <li>Cirugía Oral & Terceros Molares</li>
-              <li>Rehabilitación Oral & Prótesis</li>
-              <li>Estética Dental & Blanqueamiento</li>
-              <li>Odontología General & Preventiva</li>
+              <li>Cirugía Oral y Terceros Molares</li>
+              <li>Rehabilitación Oral y Prótesis</li>
+              <li>Estética Dental y Blanqueamiento</li>
+              <li>Odontología General y Preventiva</li>
             </ul>
           </div>
 

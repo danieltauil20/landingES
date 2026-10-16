@@ -41,7 +41,7 @@ export function AppointmentForm() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-[#EBCAC5]/15 px-4 py-1.5 rounded-full border border-[#EBCAC5]/20">
             <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#EBCAC5] font-montserrat">
-              Atención Directa & Ágil
+              Atención Directa y Ágil
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-serif tracking-tight">
@@ -176,8 +176,8 @@ export function AppointmentForm() {
                   >
                     <option value="Odontología General">Odontología General</option>
                     <option value="Cirugía Oral Especializada">Cirugía Oral Especializada</option>
-                    <option value="Estética Dental y Blanqueamiento">Estética Dental & Blanqueamiento</option>
-                    <option value="Implantología & Prótesis">Implantología & Prótesis Dental</option>
+                    <option value="Estética Dental y Blanqueamiento">Estética Dental y Blanqueamiento</option>
+                    <option value="Implantología y Prótesis">Implantología y Prótesis Dental</option>
                     <option value="Diseño de Sonrisa">Diseño de Sonrisa</option>
                     <option value="Odontología Preventiva">Odontología Preventiva</option>
                     <option value="Primera Valoración">Primera Valoración Diagnóstica</option>
