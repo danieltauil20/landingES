@@ -2,6 +2,8 @@
 
 Landing page web moderna, funcional y legalmente adaptada para los servicios odontológicos de la **Dra. Edianny Salazar** en Madrid (Zona Nuevos Ministerios). Diseñada con una interfaz elegante, accesible y 100% responsive orientada a la captación de pacientes.
 
+![Vista Previa de la Landing Page](./assets/preview.png)
+
 ---
 
 ## 🚀 Tecnologías Utilizadas
