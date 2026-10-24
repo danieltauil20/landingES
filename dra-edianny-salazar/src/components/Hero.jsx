@@ -4,32 +4,76 @@ export function Hero() {
   const treatments = [
     {
       id: 1,
-      badge: "Tecnología LED Avanzada",
-      title: "Blanqueamiento Dental",
-      subtitle: "Estética y luminosidad en una sola sesión",
-      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=formatyfit=cropyq=80yw=1000"
+      badge: "Luminosidad",
+      subtitle: "Tratamientos diseñados para devolverle el brillo natural a tu sonrisa.",
+      image: "https://images.unsplash.com/photo-1670250721717-889b17349fc4?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: 2,
       badge: "Cuidado Mínimamente Invasivo",
-      title: "Periodoncia y Salud",
-      subtitle: "Prevención y firmeza para tus encías",
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=formatyfit=cropyq=80yw=1000"
+      subtitle: "Protegemos la estructura natural de tus dientes con técnicas de vanguardia.",
+      image: "https://images.unsplash.com/photo-1681939282781-341ac4f61996?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: 3,
       badge: "Estética 100% Discreta",
-      title: "Ortodoncia Invisible",
-      subtitle: "Alineadores transparentes de alta precisión",
-      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=formatyfit=cropyq=80yw=1000"
+      subtitle: "Alinea tu sonrisa de forma cómoda, estética e imperceptible.",
+      image: "https://images.unsplash.com/photo-1660737217690-15182b43899e?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: 4,
       badge: "Cirugía de Alta Gama",
-      title: "Cirugía Oral y Implantes",
-      subtitle: "Restauración funcional con acabado natural",
-      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=formatyfit=cropyq=80yw=1000"
-    }
+      subtitle: "Procedimientos quirúrgicos seguros y de rápida recuperación.",
+      image: "https://images.unsplash.com/photo-1777443726993-8f9c8e96e46e?auto=format&fit=crop&q=80&w=1000"
+    },
+    {
+      id: 5,
+      badge: "Armonía y Funcionalidad",
+      subtitle: "Devolvemos la función completa y la estética integral a tu boca.",
+      image: "https://i.ibb.co/NdnLDGJD/wmremove-transformed7.jpg"
+    },
+    {
+      id: 6,
+      badge: "Armonía y Funcionalidad",
+      subtitle: "Prevención y diagnóstico temprano para cuidar tu salud bucodental.",
+      image: "https://images.unsplash.com/photo-1690167687106-180b0ea1d813?auto=format&fit=crop&q=80&w=1000"
+    },
+    {
+      id: 7,
+      badge: "Armonía y Funcionalidad",
+      subtitle: "Tecnología de vanguardia y un trato humano excepcional.",
+      image: "https://i.ibb.co/SCJtJbK/wmremove-transformed3.jpg"
+    },
+    {
+      id: 8,
+      badge: "Armonía y Funcionalidad",
+      subtitle: "Tratamientos especializados para mantener tus encías sanas.",
+      image: "https://i.ibb.co/RGWbc0mt/wmremove-transformed6.jpg"
+    },
+    {
+      id: 9,
+      badge: "Armonía y Funcionalidad",
+      subtitle: "Soluciones a medida adaptadas a tus necesidades.",
+      image: "https://i.ibb.co/Gv1nRZ5f/wmremove-transformed5.jpg"
+    },
+    {
+      id: 10,
+      badge: "Armonía y Funcionalidad",
+      subtitle: "Salvamos piezas dentales dañadas mediante técnicas sin dolor.",
+      image: "https://i.ibb.co/vvLFhC3R/wmremove-transformed2.jpg"
+    },
+    {
+      id: 11,
+      badge: "Armonía y Funcionalidad",
+      subtitle: "Revisiones periódicas y limpiezas para una boca protegida.",
+      image: "https://i.ibb.co/S4tFCPv9/wmremove-transformed.jpg"
+    },
+    {
+      id: 12,
+      badge: "Armonía y Funcionalidad",
+      subtitle: "Comprometidos con la máxima calidad asistencial en cada consulta.",
+      image: "https://i.ibb.co/cSq60xNc/wmremove-transformed4.jpg"
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,12 +83,12 @@ export function Hero() {
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  // Auto-rotación continua cada 3 segundos
+  // Auto-rotación continua cada 2.5 segundos
   useEffect(() => {
     if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % treatments.length);
-    }, 3000);
+    }, 2500);
     return () => clearInterval(timer);
   }, [treatments.length, isPaused]);
 
@@ -103,7 +147,7 @@ export function Hero() {
             </h1>
 
             <p className="text-base sm:text-lg text-[#513028]/85 font-montserrat max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-              Especialista en Odontología General y Cirugía Oral. Ofrecemos tratamientos personalizados de alta calidad con la más avanzada tecnología en un entorno de máximo confort.
+              Queremos cuidar de tu salud bucal como especialistas en Odontología General y Cirugía Oral, combinando tecnología avanzada y tratamientos a tu medida para proteger tu sonrisa a través de una experiencia médica totalmente segura, tranquila y con el máximo confort.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 font-montserrat">
@@ -176,7 +220,7 @@ export function Hero() {
                     >
                       <img 
                         src={treatment.image} 
-                        alt={treatment.title} 
+                        alt={treatment.badge} 
                         className={`w-full h-full object-cover object-center transition-all duration-1000 ease-in-out ${
                           isActive ? 'opacity-100 scale-100 blur-none' : 'opacity-0 scale-105 blur-md'
                         }`} 
@@ -192,15 +236,14 @@ export function Hero() {
                         </span>
                       </div>
 
-                      {/* Texto Flotante Editorial Minimalista */}
+                      {/* Texto Flotante (Solo Subtítulo) */}
                       <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white z-20">
-                        <div className="drop-shadow-lg">
-                          <h4 className="text-lg sm:text-xl font-bold text-white font-serif leading-tight">
-                            {treatment.title}
-                          </h4>
-                          <p className="text-xs text-white/90 font-montserrat mt-1 font-medium max-w-xs leading-relaxed">
-                            {treatment.subtitle}
-                          </p>
+                        <div className="drop-shadow-lg max-w-xs">
+                          {treatment.subtitle && (
+                            <p className="text-xs text-white/90 font-montserrat font-medium leading-relaxed">
+                              {treatment.subtitle}
+                            </p>
+                          )}
                         </div>
 
                         <a

@@ -1,41 +1,71 @@
 export function Services() {
   const services = [
     {
-      title: "Odontología General",
-      description: "Revisiones completas, limpiezas profundas y empastes estéticos para mantener una salud bucal impecable y prevenir futuras complicaciones.",
+      title: "Odontología Preventiva e Higiene",
+      description: "Limpiezas profesionales profundas, sellados y planes periódicos para proteger tus encías y evitar la aparición de futuras complicaciones.",
       image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=formatyfit=cropyq=80yw=600",
       badge: "Prevención"
     },
     {
-      title: "Cirugía Oral Especializada",
-      description: "Extracciones complejas, muelas del juicio y procedimientos quirúrgicos realizados con máxima precisión, seguridad y el mínimo malestar.",
+      title: "Odontología General",
+      description: "Revisiones completas, diagnósticos precisos y empastes estéticos avanzados para mantener una salud bucal impecable y solucionar problemas cotidianos.",
       image: "https://images.unsplash.com/photo-1684607633251-8a4a8d94ddd2?auto=formatyfit=cropyq=80yw=600",
-      badge: "Especialidad"
+      badge: "Cuidado Diario"
     },
+    {
+      title: "Endodoncia",
+      description: "Tratamientos de conducto para salvar tus dientes desde la raíz y extracciones complejas realizadas con máxima precisión y mínimo malestar.",
+      image: "https://images.unsplash.com/photo-1664530837840-07497f9fe437?auto=formatyfit=cropyq=80yw=600",
+      badge: "Salud Interna"
+    },
+
+     {
+      title: "Periodonocia",
+      description: "Planificación digital completamente personalizada para proyectar visualmente la forma, tamaño y simetría dental que mejor se adapte a tus facciones.",
+      image: "https://images.unsplash.com/photo-1739902526173-06750b78cfb7?auto=formatyfit=cropyq=80yw=600",
+      badge: "Cuidado Gingival"
+    },
+    {
+      title: "Prótesis Dental",
+      description: "Soluciones fijas o removibles adaptadas a tu boca para reemplazar piezas perdidas, restaurando la funcionalidad de la mordida y la masticación.",
+      image: "https://plus.unsplash.com/premium_photo-1744142825138-3157f369dbb2?auto=formatyfit=cropyq=80yw=600",
+      badge: "Restauración"
+    },
+
+    {
+      title: "Rehabilitación Oral",
+      description: "Planificación digital completamente personalizada para proyectar visualmente la forma, tamaño y simetría dental que mejor se adapte a tus facciones.",
+      image: "https://images.unsplash.com/photo-1606811811225-10635e4c9a39?auto=formatyfit=cropyq=80yw=600",
+      badge: "Reconstrucción"
+    },
+
+    {
+      title: "Cirugía Oral",
+      description: "Planificación digital completamente personalizada para proyectar visualmente la forma, tamaño y simetría dental que mejor se adapte a tus facciones.",
+      image: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=formatyfit=cropyq=80yw=600",
+      badge: "Cirugía"
+    }, 
+
     {
       title: "Estética Dental y Blanqueamiento",
-      description: "Carillas de porcelana y tratamientos de blanqueamiento avanzado para devolverle el brillo, alineación y armonía natural a tu sonrisa.",
-      image: "https://images.unsplash.com/photo-1769559893692-c6d0623bf8e4?auto=formatyfit=cropyq=80yw=600",
-      badge: "Estética"
+      description: "Tratamientos de aclaramiento avanzado y técnicas modernas para devolverle el brillo, la luminosidad y la armonía natural a tu sonrisa.",
+      image: "https://images.unsplash.com/photo-1664529842476-e63110e635ec?qauto=formatyfit=cropyq=80yw=600",
+      badge: "Luminosidad"
     },
-    {
-      title: "Implantología y Prótesis",
-      description: "Soluciones fijas y duraderas para recuperar piezas perdidas, restaurando tanto la funcionalidad de la mordida como la estética facial.",
-      image: "https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=formatyfit=cropyq=80yw=600",
-      badge: "Rehabilitación"
-    },
-    {
+
+      {
       title: "Diseño de Sonrisa",
-      description: "Planificación digital personalizada para transformar tu sonrisa atendiendo a las proporciones faciales y expectativas individuales.",
-      image: "https://images.unsplash.com/photo-1606142979064-349704d230e3?qauto=formatyfit=cropyq=80yw=600",
-      badge: "Digital"
-    },
-    {
-      title: "Odontología Preventiva",
-      description: "Planes de mantenimiento periódicos y tratamientos de encías (periodoncia) orientados a proteger la salud bucodental a largo plazo.",
+      description: "Planificación digital completamente personalizada para proyectar visualmente la forma, tamaño y simetría dental que mejor se adapte a tus facciones.",
       image: "https://images.unsplash.com/photo-1777331903190-341a3dd0441b?auto=formatyfit=cropyq=80yw=600",
-      badge: "Cuidado Continuo"
-    }
+      badge: "Armonía"
+    },
+
+    
+
+   
+
+    
+    
   ];
 
   return (
