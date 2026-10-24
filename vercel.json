@@ -1,13 +1,10 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "Accept-Ranges",
-          "value": "none"
-        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
