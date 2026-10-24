@@ -4,7 +4,7 @@ export function AppointmentForm() {
   const [formData, setFormData] = useState({
     nombre: "",
     telefono: "",
-    tratamiento: "Odontología General",
+    tratamiento: "Odontología Preventiva e Higiene",
     horarioPref: "Mañana",
     comentario: "",
     aceptaPolitica: false
@@ -12,6 +12,29 @@ export function AppointmentForm() {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+
+    if (name === "telefono") {
+      // Extrae solo dígitos
+      let numeros = value.replace(/\D/g, "");
+
+      // Valida que el primer dígito sea exclusivamente 6 o 7
+      if (numeros.length > 0 && !/^[67]/.test(numeros)) {
+        return; // Ignora el intento si no empieza por 6 o 7
+      }
+
+      // Limita a un máximo de 9 dígitos
+      numeros = numeros.slice(0, 9);
+
+      // Agrupa los dígitos de 3 en 3 (ej. 600 000 000)
+      const formateado = numeros.match(/.{1,3}/g)?.join(" ") || "";
+
+      setFormData({
+        ...formData,
+        telefono: formateado
+      });
+      return;
+    }
+
     setFormData({
       ...formData,
       [name]: type === "checkbox" ? checked : value
@@ -20,13 +43,21 @@ export function AppointmentForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validar que el número contenga exactamente 9 dígitos
+    const soloNumeros = formData.telefono.replace(/\s/g, "");
+    if (soloNumeros.length < 9) {
+      alert("Por favor, introduce un número de teléfono móvil válido de 9 dígitos (que empiece por 6 o 7).");
+      return;
+    }
+
     if (!formData.aceptaPolitica) {
       alert("Por favor, acepta la política de privacidad para continuar.");
       return;
     }
 
     const mensaje = `¡Hola! Me gustaría agendar una cita.%0A%0A*Nombre:* ${formData.nombre}%0A*Teléfono:* ${formData.telefono}%0A*Tratamiento:* ${formData.tratamiento}%0A*Horario preferido:* ${formData.horarioPref}%0A*Detalles:* ${formData.comentario || "Sin comentarios adicionales"}`;
-    
+
     window.open(`https://wa.me/34641768115?text=${mensaje}`, "_blank");
   };
 
@@ -36,7 +67,7 @@ export function AppointmentForm() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#EBCAC5]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Cabecera de la sección */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-[#EBCAC5]/15 px-4 py-1.5 rounded-full border border-[#EBCAC5]/20">
@@ -48,12 +79,12 @@ export function AppointmentForm() {
             Agenda tu Primera Cita
           </h2>
           <p className="text-sm sm:text-base text-[#EBCAC5]/85 font-montserrat leading-relaxed">
-            Completa tus datos o contáctanos directamente por WhatsApp para coordinar tu consulta con la Dra. Edianny Salazar.
+            Completa tus datos o contáctanos directamente por WhatsApp para coordinar tu consulta.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* BLOQUE IZQUIERDO: Información de Contacto */}
           <div className="lg:col-span-5 space-y-8 bg-white/5 backdrop-blur-md p-8 sm:p-10 rounded-3xl border border-[#EBCAC5]/15">
             <div>
@@ -91,8 +122,8 @@ export function AppointmentForm() {
                   <h4 className="text-xs font-bold text-white font-montserrat uppercase tracking-wider">
                     Ubicación
                   </h4>
-                  <p className="text-xs text-[#EBCAC5]/80 font-montserrat mt-0.5">
-                    Madrid, Comunidad de Madrid
+                  <p className="text-xs font-semibold text-white font-montserrat mt-0.5">
+                    Zona Nuevos Ministerios · Madrid
                   </p>
                 </div>
               </div>
@@ -103,10 +134,9 @@ export function AppointmentForm() {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-white font-montserrat uppercase tracking-wider">
-                    Horario de Atención
+                    Atención
                   </h4>
-                  <p className="text-xs text-[#EBCAC5]/80 font-montserrat mt-0.5">
-                    Lunes a Viernes: 9:00 - 20:00 h<br />
+                  <p className="text-xs font-semibold text-white font-montserrat mt-0.5">
                     Previa cita concertada
                   </p>
                 </div>
@@ -130,7 +160,7 @@ export function AppointmentForm() {
           {/* BLOQUE DERECHO: Formulario */}
           <div className="lg:col-span-7 bg-white text-[#513028] p-8 sm:p-10 rounded-3xl shadow-2xl border border-[#EBCAC5]/20">
             <form onSubmit={handleSubmit} className="space-y-6">
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-[#513028] uppercase tracking-wider font-montserrat">
@@ -154,8 +184,10 @@ export function AppointmentForm() {
                   <input
                     type="tel"
                     name="telefono"
+                    inputMode="numeric"
+                    maxLength={11}
                     required
-                    placeholder="Ej. +34 600 000 000"
+                    placeholder="Ej. 600 000 000"
                     value={formData.telefono}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl bg-[#EBCAC5]/10 border border-[#513028]/20 text-[#513028] text-sm font-montserrat focus:outline-none focus:ring-2 focus:ring-[#513028] transition-all"
@@ -174,17 +206,19 @@ export function AppointmentForm() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl bg-[#EBCAC5]/10 border border-[#513028]/20 text-[#513028] text-sm font-montserrat focus:outline-none focus:ring-2 focus:ring-[#513028] transition-all"
                   >
+                    <option value="Odontología Preventiva e Higiene">Odontología Preventiva e Higiene</option>
                     <option value="Odontología General">Odontología General</option>
-                    <option value="Cirugía Oral Especializada">Cirugía Oral Especializada</option>
+                    <option value="Endodoncia">Endodoncia</option>
+                    <option value="Periodoncia">Periodoncia</option>
+                    <option value="Prótesis Dental">Prótesis Dental</option>
+                    <option value="Rehabilitación Oral">Rehabilitación Oral</option>
+                    <option value="Cirugía Oral">Cirugía Oral</option>
                     <option value="Estética Dental y Blanqueamiento">Estética Dental y Blanqueamiento</option>
-                    <option value="Implantología y Prótesis">Implantología y Prótesis Dental</option>
                     <option value="Diseño de Sonrisa">Diseño de Sonrisa</option>
-                    <option value="Odontología Preventiva">Odontología Preventiva</option>
-                    <option value="Primera Valoración">Primera Valoración Diagnóstica</option>
                   </select>
                 </div>
 
-                {/* Preferencia de Horario */}
+                {/* Preferencia de Horario (Mañana / Tarde) */}
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-[#513028] uppercase tracking-wider font-montserrat">
                     Preferencia de Horario
@@ -195,9 +229,8 @@ export function AppointmentForm() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl bg-[#EBCAC5]/10 border border-[#513028]/20 text-[#513028] text-sm font-montserrat focus:outline-none focus:ring-2 focus:ring-[#513028] transition-all"
                   >
-                    <option value="Mañana (9:00 - 14:00)">Mañana (9:00 - 14:00)</option>
-                    <option value="Tarde (15:00 - 20:00)">Tarde (15:00 - 20:00)</option>
-                    <option value="Indiferente">Indiferente / Cualquiera</option>
+                    <option value="Mañana">Mañana</option>
+                    <option value="Tarde">Tarde</option>
                   </select>
                 </div>
               </div>

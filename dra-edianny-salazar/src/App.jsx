@@ -2,51 +2,41 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { AppointmentForm } from './components/AppointmentForm';
-{/*import { About } from './components/About';*/}
-import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
-{/*import VideoGallery from './components/VideoGallery';*/}
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-800 antialiased font-sans relative">
+      {/* Navegación Principal */}
       <Navbar />
-      <Hero />
-      <Services />
-      <AppointmentForm />
-      {/*<About />*/}
-      <Testimonials />
-      <FAQ />
-      <Footer />
-      {/*<VideoGallery />*/}
 
-      {/* BOTÓN FLOTANTE DE WHATSAPP DIRECTO */}
+      {/* Presentación Visual & Impacto */}
+      <Hero />
+
+      {/* Catálogo de Tratamientos (9 Especialidades) */}
+      <Services />
+
+      {/* Formulario de Cita (Teléfono 6/7, 9 dígitos, Ubicación Nuevos Ministerios) */}
+      <AppointmentForm />
+
+      {/* Preguntas Frecuentes */}
+      <FAQ />
+
+      {/* Pie de Página */}
+      <Footer />
+
+      {/* Botón Flotante de WhatsApp */}
       <a
         href="https://wa.me/34641768115?text=¡Hola!%20Deseo%20más%20información%20sobre%20una%20cita."
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="WhatsApp"
-        style={{
-          position: 'fixed',
-          bottom: '24px',
-          right: '24px',
-          zIndex: 999999,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '60px',
-          height: '60px',
-          backgroundColor: '#25D366',
-          borderRadius: '50%',
-          boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
-          cursor: 'pointer',
-          textDecoration: 'none'
-        }}
+        aria-label="Contactar por WhatsApp"
+        className="fixed bottom-6 right-6 z-[999999] flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300"
       >
         <svg 
-          width="34" 
-          height="34" 
+          width="32" 
+          height="32" 
           viewBox="0 0 24 24" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"

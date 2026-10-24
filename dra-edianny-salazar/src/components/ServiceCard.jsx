@@ -57,7 +57,7 @@ export function ServiceCard({ icon, title, category, description, features, high
         className={`w-full py-3.5 px-4 rounded-xl text-xs font-bold font-montserrat transition-all duration-300 text-center flex items-center justify-center space-x-2 ${
           highlighted 
             ? 'bg-gradient-to-r from-cyan-400 to-teal-300 hover:from-cyan-300 hover:to-teal-200 text-slate-950 shadow-md shadow-cyan-400/20' 
-            : 'bg-slate-100 hover:bg-gradient-to-r hover:from-cyan-600 hover:to-teal-600 hover:text-white text-slate-700 shadow-none hover:shadow-lg hover:shadow-cyan-600/25'
+            : 'bg-slate-100 hover:bg-linear-to-r hover:from-cyan-600 hover:to-teal-600 hover:text-white text-slate-700 shadow-none hover:shadow-lg hover:shadow-cyan-600/25'
         }`}
       >
         <span>Consultar Tratamiento</span>

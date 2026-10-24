@@ -22,7 +22,7 @@ export function FAQ() {
     },
     {
       question: "¿Cómo puedo solicitar o reagendar mi cita?",
-      answer: "Puedes solicitarla a través del formulario de esta página o escribiéndonos directamente a nuestro número de WhatsApp (+34 641 76 81 15). Nos coordinaremos contigo para elegir el horario que mejor se adapte a tu agenda."
+      answer: "Puedes solicitarla a través del formulario de esta página o escribiéndonos directamente a nuestro número de WhatsApp. Nos coordinaremos contigo para elegir el horario que mejor se adapte a tu agenda."
     }
   ];
 
@@ -59,28 +59,50 @@ export function FAQ() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl border border-[#513028]/10 shadow-sm overflow-hidden transition-all duration-300"
+                className="bg-white rounded-2xl border border-[#513028]/10 shadow-sm hover:shadow-md overflow-hidden transition-all duration-300"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none group cursor-pointer"
                 >
-                  <span className="text-sm sm:text-base font-bold text-[#513028] font-serif">
+                  <span className="text-sm sm:text-base font-bold text-[#513028] font-serif group-hover:text-[#3d241e] transition-colors">
                     {faq.question}
                   </span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? 'bg-[#513028] text-[#EBCAC5] rotate-180' : 'bg-[#EBCAC5]/30 text-[#513028]'}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen ? 'bg-[#513028] text-[#EBCAC5] rotate-180' : 'bg-[#EBCAC5]/30 text-[#513028] group-hover:bg-[#EBCAC5]/50'}`}>
                     <i className="fa-solid fa-chevron-down text-xs"></i>
                   </div>
                 </button>
 
-                {isOpen && (
+                {/* Respuesta animada suave */}
+                <div 
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
                   <div className="px-6 pb-6 pt-1 border-t border-[#513028]/5 text-xs sm:text-sm text-[#513028]/80 font-montserrat leading-relaxed">
                     {faq.answer}
                   </div>
-                )}
+                </div>
               </div>
             );
           })}
+        </div>
+
+        {/* Bloque de contacto directo si le queda alguna duda */}
+        <div className="mt-12 text-center bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-[#513028]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-center sm:text-left">
+            <h4 className="text-sm font-bold text-[#513028] font-serif">¿Tienes alguna otra consulta?</h4>
+            <p className="text-xs text-[#513028]/70 font-montserrat mt-0.5">Te respondemos directamente y al instante por WhatsApp.</p>
+          </div>
+          <a
+            href="https://wa.me/34641768115?text=¡Hola!%20Tengo%20una%20consulta%20antes%20de%20agendar."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 bg-[#513028] hover:bg-[#3d241e] text-[#EBCAC5] px-5 py-2.5 rounded-full font-montserrat font-extrabold text-[11px] uppercase tracking-wider transition-all duration-300 flex items-center space-x-2 shadow-sm"
+          >
+            <i className="fa-brands fa-whatsapp text-sm"></i>
+            <span>Preguntar por WhatsApp</span>
+          </a>
         </div>
 
       </div>

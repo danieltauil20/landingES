@@ -3,69 +3,57 @@ export function Services() {
     {
       title: "Odontología Preventiva e Higiene",
       description: "Limpiezas profesionales profundas, sellados y planes periódicos para proteger tus encías y evitar la aparición de futuras complicaciones.",
-      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=formatyfit=cropyq=80yw=600",
+      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=600",
       badge: "Prevención"
     },
     {
       title: "Odontología General",
       description: "Revisiones completas, diagnósticos precisos y empastes estéticos avanzados para mantener una salud bucal impecable y solucionar problemas cotidianos.",
-      image: "https://images.unsplash.com/photo-1684607633251-8a4a8d94ddd2?auto=formatyfit=cropyq=80yw=600",
+      image: "https://images.unsplash.com/photo-1684607633251-8a4a8d94ddd2?auto=format&fit=crop&q=80&w=600",
       badge: "Cuidado Diario"
     },
     {
       title: "Endodoncia",
-      description: "Tratamientos de conducto para salvar tus dientes desde la raíz y extracciones complejas realizadas con máxima precisión y mínimo malestar.",
-      image: "https://images.unsplash.com/photo-1664530837840-07497f9fe437?auto=formatyfit=cropyq=80yw=600",
+      description: "Tratamientos de conducto con tecnología de alta precisión para salvar tus piezas dentales naturales eliminando la infección y el dolor desde la raíz.",
+      image: "https://images.unsplash.com/photo-1664530837840-07497f9fe437?auto=format&fit=crop&q=80&w=600",
       badge: "Salud Interna"
     },
-
-     {
-      title: "Periodonocia",
-      description: "Planificación digital completamente personalizada para proyectar visualmente la forma, tamaño y simetría dental que mejor se adapte a tus facciones.",
-      image: "https://images.unsplash.com/photo-1739902526173-06750b78cfb7?auto=formatyfit=cropyq=80yw=600",
+    {
+      title: "Periodoncia",
+      description: "Diagnóstico y tratamiento especializado del sangrado e inflamación de encías para proteger el soporte óseo de tus dientes y prevenir la periodontitis.",
+      image: "https://images.unsplash.com/photo-1739902526173-06750b78cfb7?auto=format&fit=crop&q=80&w=600",
       badge: "Cuidado Gingival"
     },
     {
       title: "Prótesis Dental",
-      description: "Soluciones fijas o removibles adaptadas a tu boca para reemplazar piezas perdidas, restaurando la funcionalidad de la mordida y la masticación.",
-      image: "https://plus.unsplash.com/premium_photo-1744142825138-3157f369dbb2?auto=formatyfit=cropyq=80yw=600",
+      description: "Soluciones fijas o removibles adaptadas a tu boca para reemplazar piezas perdidas, restaurando la funcionalidad de la mordida y la estética natural.",
+      image: "https://plus.unsplash.com/premium_photo-1744142825138-3157f369dbb2?auto=format&fit=crop&q=80&w=600",
       badge: "Restauración"
     },
-
     {
       title: "Rehabilitación Oral",
-      description: "Planificación digital completamente personalizada para proyectar visualmente la forma, tamaño y simetría dental que mejor se adapte a tus facciones.",
-      image: "https://images.unsplash.com/photo-1606811811225-10635e4c9a39?auto=formatyfit=cropyq=80yw=600",
+      description: "Tratamiento integral para reconstruir casos complejos de desgaste o pérdida múltiple de piezas, devolviendo la función masticatoria y la armonía facial.",
+      image: "https://images.unsplash.com/photo-1606811811225-10635e4c9a39?auto=format&fit=crop&q=80&w=600",
       badge: "Reconstrucción"
     },
-
     {
       title: "Cirugía Oral",
-      description: "Planificación digital completamente personalizada para proyectar visualmente la forma, tamaño y simetría dental que mejor se adapte a tus facciones.",
-      image: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=formatyfit=cropyq=80yw=600",
+      description: "Extracciones complejas e intervenciones quirúrgicas orales realizadas bajo protocolos estrictos para minimizar las molestias y agilizar la recuperación.",
+      image: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&q=80&w=600",
       badge: "Cirugía"
-    }, 
-
+    },
     {
       title: "Estética Dental y Blanqueamiento",
       description: "Tratamientos de aclaramiento avanzado y técnicas modernas para devolverle el brillo, la luminosidad y la armonía natural a tu sonrisa.",
-      image: "https://images.unsplash.com/photo-1664529842476-e63110e635ec?qauto=formatyfit=cropyq=80yw=600",
+      image: "https://images.unsplash.com/photo-1664529842476-e63110e635ec?auto=format&fit=crop&q=80&w=600",
       badge: "Luminosidad"
     },
-
-      {
+    {
       title: "Diseño de Sonrisa",
       description: "Planificación digital completamente personalizada para proyectar visualmente la forma, tamaño y simetría dental que mejor se adapte a tus facciones.",
-      image: "https://images.unsplash.com/photo-1777331903190-341a3dd0441b?auto=formatyfit=cropyq=80yw=600",
+      image: "https://images.unsplash.com/photo-1777331903190-341a3dd0441b?auto=format&fit=crop&q=80&w=600",
       badge: "Armonía"
-    },
-
-    
-
-   
-
-    
-    
+    }
   ];
 
   return (
@@ -74,7 +62,7 @@ export function Services() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full bg-gradient-to-b from-white/60 via-transparent to-white/60 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Cabecera de la sección */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full border border-[#513028]/15 shadow-sm">
@@ -165,7 +153,7 @@ export function Services() {
               ¿No estás seguro de qué tratamiento necesitas?
             </h3>
             <p className="text-xs sm:text-sm text-[#EBCAC5]/85 font-montserrat max-w-xl">
-              Agenda una primera valoración diagnóstica con la Dra. Edianny Salazar para evaluar la salud de tu boca y diseñar un plan a tu medida.
+              Agenda una primera valoración diagnóstica, para evaluar la salud de tu boca y diseñar un plan a tu medida.
             </p>
           </div>
 
