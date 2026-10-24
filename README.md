@@ -44,4 +44,4 @@ Si deseas clonar y ejecutar este proyecto en tu entorno local:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/danieltauil20/landingES.git](https://github.com/danieltauil20/landingES.git)
+   git clone [https://github.com/danieltauil20/landingES.git]
