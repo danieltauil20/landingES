@@ -1,34 +1,47 @@
-# 🦷 Landing Page - Dra. Edianny Salazar
+# 🦷 Landing Page Profesional - Dra. Edianny Salazar
 
-![Vista previa de la Landing](./assets/preview-real.png)
+Landing page web moderna, funcional y legalmente adaptada para los servicios odontológicos de la **Dra. Edianny Salazar** en Madrid (Zona Nuevos Ministerios). Diseñada con una interfaz elegante, accesible y 100% responsive orientada a la captación de pacientes.
 
-Landing page profesional y moderna desarrollada para servicios odontológicos, diseñada con una interfaz limpia, adaptable y completamente responsive para ofrecer una excelente experiencia de usuario en cualquier dispositivo.
+---
 
-## 🚀 Tecnologías utilizadas
+## 🚀 Tecnologías Utilizadas
 
-Este proyecto ha sido construido utilizando herramientas modernas de desarrollo web frontend:
+- **React** (con **Vite** para una compilación y Hot Module Replacement ultrarrápidos).
+- **Tailwind CSS** (arquitectura Utility-First para estilos optimizados).
+- **JavaScript (ES6+)**.
+- **FontAwesome & Lucide Icons** (iconografía institucional médica).
+- **Git & GitHub** (control de versiones).
+- **Vercel** (despliegue continuo y hosting con SSL activo).
 
-- **React** (con Vite para un rendimiento ultrarrápido)
-- **Tailwind CSS** para un diseño moderno y adaptable
-- **JavaScript (ES6+)**
-- **Git & GitHub** para el control de versiones y despliegue
+---
 
-## 📱 Características principales
+## 📱 Características Principales
 
-- **Diseño Responsive:** Adaptado perfectamente a dispositivos móviles, tablets y ordenadores de escritorio.
-- **Navegación Fluida:** Barra de navegación interactiva y optimizada para accesibilidad móvil.
-- **Identidad Visual:** Integración de logotipo personalizado y paleta de colores corporativa orientada al sector salud.
+- **Conversión Directa por WhatsApp:** Formulario de solicitud de cita previa que valida los datos del paciente y genera un mensaje estructurado y listo para enviar en un solo clic.
+- **Cumplimiento Legal Strict (AEPD / LSSI-CE):**
+  - **Aviso Legal & Política de Privacidad:** Modales interactivos integrados con datos profesionales y de consulta pública (evitando la exposición de datos residenciales privados).
+  - **Banner de Cookies Persistente:** Retardo de entrada de 3.5s, animaciones fluidas y gestión de preferencias almacenada en `localStorage`.
+  - **Casilla de Consentimiento Obligatoria:** Verificación explícita de privacidad en los formularios de contacto.
+- **Validación Avanzada de Formularios:** Formateo en tiempo real para números de teléfono españoles (limitado a prefijos 6/7 y 9 dígitos).
+- **Experiencia de Usuario (UI/UX):**
+  - Paleta de colores corporativa personalizada en tonos cálidos y profesionales.
+  - Navegación responsive fluida con menú hamburguesa adaptado a móviles.
+  - Secciones estructuradas: Hero, Servicios, Sobre la Doctora, Preguntas Frecuentes (FAQ), Testimonios y Contacto.
 
-## 💡 Aprendizajes y enfoque técnico
-Durante el desarrollo de esta landing page se aplicó un enfoque *Utility-First* combinando **React** y **Tailwind CSS** sobre **Vite**:
-- **Componentización y Estilos:** La integración de Tailwind directamente en la estructura JSX de React permitió construir una interfaz moderna y coherente sin necesidad de gestionar archivos CSS externos extensos.
-- **Flujo de desarrollo ágil:** El uso de Vite garantizó un refresco instantáneo en el navegador (HMR), optimizando el tiempo de desarrollo y la prueba de componentes en tiempo real.
-- **Buenas prácticas:** Estructura modular de componentes y control de versiones mediante un flujo de Git limpio y libre de conflictos de entorno.
+---
 
-## 🛠️ Instalación y ejecución local
+## 💡 Aprendizajes y Enfoque Técnico
 
-Si deseas clonar y probar este proyecto en tu entorno local, sigue estos pasos:
+- **Componentización Limpia:** Modularización del código en React (`Hero.jsx`, `AppointmentForm.jsx`, `LegalModal.jsx`, `CookieBanner.jsx`, etc.) para un mantenimiento escalable.
+- **Cumplimiento Normativo en Frontend:** Arquitectura pensada para cumplir con la legislación española sobre protección de datos y servicios de la sociedad de la información en el sector sanitario.
+- **Deploy Continuo:** Configuración del flujo Git limpiando el entorno local (`.gitignore` optimizado para evitar rastreo de `node_modules`) e integración automática con Vercel.
 
-1. Clona el repositorio:
+---
+
+## 🛠️ Instalación y Ejecución Local
+
+Si deseas clonar y ejecutar este proyecto en tu entorno local:
+
+1. **Clonar el repositorio:**
    ```bash
    git clone [https://github.com/danieltauil20/landingES.git](https://github.com/danieltauil20/landingES.git)
