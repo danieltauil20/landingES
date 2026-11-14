@@ -42,8 +42,22 @@ Landing page web moderna, funcional y legalmente adaptada para los servicios odo
 
 ## 🛠️ Instalación y Ejecución Local
 
-Si deseas clonar y ejecutar este proyecto en tu entorno local:
-
 1. Clona el repositorio:
-   ```bash
-   git clone [https://github.com/danieltauil20/landingES.git](https://github.com/danieltauil20/landingES.git)
+```bash
+git clone [https://github.com/danieltauil20/landingES.git](https://github.com/danieltauil20/landingES.git)
+```
+
+2. Entra al directorio del proyecto:
+```bash
+cd landingES
+```
+
+3. Instala las dependencias:
+```bash
+npm install
+```
+
+4. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+```
