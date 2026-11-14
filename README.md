@@ -1,18 +1,19 @@
-# 🦷 Landing Page Profesional - Dra. Edianny Salazar
+# 🦷 Clínica Dental Dra. Edianny Salazar — Landing Page
 
-Landing page web moderna, funcional y legalmente adaptada para los servicios odontológicos de la Dra. Edianny Salazar en Madrid (Zona Nuevos Ministerios). Diseñada con una interfaz elegante, accesible y 100% *responsive* orientada a la captación de pacientes y conversión.
+Web corporativa y sistema de captación de pacientes diseñada para consulta odontológica en Madrid (Nuevos Ministerios). Construida con enfoque en rendimiento, experiencia de usuario móvil y cumplimiento normativo sanitario.
 
-🔗 **Web en producción:** [odontologiaediannysalazar.vercel.app](https://odontologiaediannysalazar.vercel.app/)
+👉 **[Ver web en vivo](https://odontologiaediannysalazar.vercel.app/)**
+
+![Vista previa de la web](./public/landingpage.png)
 
 ---
 
-## 🚀 Tecnologías Utilizadas
+## 🛠️ Stack Tecnológico
 
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 
 ---
