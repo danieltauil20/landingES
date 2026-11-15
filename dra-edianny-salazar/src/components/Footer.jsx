@@ -3,7 +3,6 @@ import { LegalModal } from "./LegalModal";
 import { CookieBanner } from "./CookieBanner";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
   const [modalState, setModalState] = useState({ isOpen: false, type: "aviso" });
 
   const openModal = (type) => {
@@ -18,7 +17,7 @@ export function Footer() {
     <>
       <footer className="bg-[#513028] text-[#EBCAC5] relative overflow-hidden pt-16 pb-10 border-t border-[#EBCAC5]/20 font-montserrat">
         {/* Luz sutil de fondo */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full bg-gradient-to-b from-white/5 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full bg-linear-to-b from-white/5 via-transparent to-transparent pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
@@ -97,11 +96,21 @@ export function Footer() {
 
           </div>
 
-          {/* CIERRE INFERIOR INSTITUCIONAL CON ENLACES LEGALES */}
+          {/* CIERRE INFERIOR INSTITUCIONAL CON FIRMA Y ENLACES LEGALES */}
           <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-[#EBCAC5]/70 gap-4 text-center md:text-left">
             
-            <div className="flex items-center space-x-2">
-              <p>© {currentYear} Odontología & Cirugía Oral · Dra. Edianny Salazar</p>
+            {/* Firma limpia con enlace directo a GitHub */}
+            <div className="flex items-center">
+              <a 
+                href="https://github.com/danieltauil20" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[#EBCAC5]/90 hover:text-white font-medium transition-colors group"
+                title="Ver perfil y repositorios en GitHub"
+              >
+                <span>Created by Daniel Tauil</span>
+                <i className="fa-brands fa-github text-xs group-hover:scale-110 transition-transform"></i>
+              </a>
             </div>
 
             <div className="flex items-center space-x-3 text-[10px] uppercase font-semibold tracking-wider text-[#EBCAC5]/60">
